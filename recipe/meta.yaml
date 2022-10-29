@@ -1,5 +1,5 @@
 {% set name = "pyobjc-framework-CoreServices" %}
-{% set version = "8.5" %}
+{% set version = "8.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 58bad844c8e5ee82852d860b117d1238c3ed2db8dd57f754feb6bd5801fe878d
+  sha256: 97e8b27b32a32ca7d7d0c780b4e5812a09b109f9867fc3890031f2bb42fd37ee
   patches:
     - patches/0001-Remove-werror-from-compile-flags.patch
 
 build:
-  skip: true   # [not osx]
+  skip: true  # [not osx]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -44,7 +44,7 @@ test:
 
 about:
   home: https://github.com/ronaldoussoren/pyobjc
-  summary: 'Wrappers for the “CoreServices” framework on macOS.'
+  summary: Wrappers for the “CoreServices” framework on macOS.
   description: |
     The PyObjC project aims to provide a bridge between the Python and
     Objective-C programming languages on macOS. The bridge is intended to be
