@@ -1,11 +1,11 @@
-About pyobjc-framework-coreservices
-===================================
+About pyobjc-framework-coreservices-feedstock
+=============================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyobjc-framework-coreservices-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ronaldoussoren/pyobjc
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyobjc-framework-coreservices-feedstock/blob/main/LICENSE.txt)
 
 Summary: Wrappers for the “CoreServices” framework on macOS.
 
