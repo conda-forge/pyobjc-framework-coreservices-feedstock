@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a6e80770ead727979e9ffd4ea97c30889e1fdec49873bb5129bf3ef3c5b90005
+  sha256: cc0287dccc7089ad13b0a44472d7fc1ce804f06ea1f4c44c5a7c5c9eb8388d72
   patches:
     - patches/0001-Remove-werror-from-compile-flags.patch
 
