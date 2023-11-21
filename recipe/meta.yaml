@@ -1,5 +1,5 @@
 {% set name = "pyobjc-framework-CoreServices" %}
-{% set version = "9.2" %}
+{% set version = "10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cc0287dccc7089ad13b0a44472d7fc1ce804f06ea1f4c44c5a7c5c9eb8388d72
+  sha256: a6e80770ead727979e9ffd4ea97c30889e1fdec49873bb5129bf3ef3c5b90005
   patches:
     - patches/0001-Remove-werror-from-compile-flags.patch
 
 build:
   skip: true  # [not osx or py2k or python_impl == 'pypy' or (arm64 and py < 39)]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
