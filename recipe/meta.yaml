@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyobjc_framework_coreservices-{{ version }}.tar.gz
   sha256: a7c38090c26a2e1b600fb31c3b056ef60e86bacfbb26ecfbcdd997ed61b1cdc8
   patches:
     - patches/0001-Remove-werror-from-compile-flags.patch
