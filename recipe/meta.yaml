@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyobjc_framework_coreservices-{{ version }}.tar.gz
   sha256: ee3cf8379839efe4300bbd33dca204ebe873e2671160fff856569976d45c68a8
-  patches:
-    - patches/0001-Remove-werror-from-compile-flags.patch
 
 build:
   skip: true  # [not osx or py2k or python_impl == 'pypy' or (arm64 and py < 39)]
