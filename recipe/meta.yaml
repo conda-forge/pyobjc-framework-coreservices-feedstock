@@ -1,13 +1,13 @@
 {% set name = "pyobjc-framework-CoreServices" %}
-{% set version = "12.2" %}
+{% set version = "12.2.1" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyobjc_framework_coreservices-{{ version }}.tar.gz
-  sha256: ea52c77e9a162b6823c3b364f391b4369d967365e5207a0d45cf6d0e37cec0e6
+  sha256: b4f052acd7346afa6f5441d32a19faaf080c3441cfaafad40c9b9a485b664554
 
 build:
   skip: true  # [not osx or py2k or python_impl == 'pypy' or (arm64 and py < 39)]
