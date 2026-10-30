@@ -19,7 +19,6 @@ fully bidirectional, allowing the Python programmer to take full advantage
 of the power provided by various Objective-C based toolkits and the
 Objective-C programmer transparent access to Python based functionality.
 
-
 Current build status
 ====================
 
