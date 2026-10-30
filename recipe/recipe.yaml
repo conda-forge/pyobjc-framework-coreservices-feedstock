@@ -1,0 +1,68 @@
+schema_version: 1
+
+context:
+  name: pyobjc-framework-CoreServices
+  version: "13.0"
+
+package:
+  name: ${{ name | lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/pyobjc_framework_coreservices-${{ version }}.tar.gz
+  sha256: 5b619bff5b49007e9089598cdb7f6375edfb9c1370b7a6aff44e4acc07ea5a03
+
+build:
+  number: 0
+  skip:
+    - not osx
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+  host:
+    - python
+    - pip
+    - setuptools
+  run:
+    - python
+    - pyobjc-core ==${{ version }}
+    - pyobjc-framework-fsevents ==${{ version }}
+
+tests:
+  - python:
+      imports:
+        - CoreServices
+        - CoreServices.CarbonCore
+        - CoreServices.DictionaryServices
+        - CoreServices.LaunchServices
+        - CoreServices.Metadata
+        - CoreServices.SearchKit
+
+about:
+  homepage: https://github.com/ronaldoussoren/pyobjc
+  summary: Wrappers for the “CoreServices” framework on macOS.
+  description: |
+    The PyObjC project aims to provide a bridge between the Python and
+    Objective-C programming languages on macOS. The bridge is intended to be
+    fully bidirectional, allowing the Python programmer to take full advantage
+    of the power provided by various Objective-C based toolkits and the
+    Objective-C programmer transparent access to Python based functionality.
+  license: MIT
+  license_file: License.txt
+  documentation: https://pyobjc.readthedocs.io/
+  repository: https://github.com/ronaldoussoren/pyobjc
+
+extra:
+  recipe-maintainers:
+    - andfoy
+    - ccordoba12
+    - dalthviz
+    - larsoner
+    - steff456
