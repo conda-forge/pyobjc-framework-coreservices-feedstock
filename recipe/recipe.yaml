@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyobjc-framework-CoreServices
-  version: "13.0"
+  version: "13.1"
 
 package:
   name: ${{ name | lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/pyobjc_framework_coreservices-${{ version }}.tar.gz
-  sha256: 5b619bff5b49007e9089598cdb7f6375edfb9c1370b7a6aff44e4acc07ea5a03
+  sha256: 6d750b717a4fb8ab383edb5f689425c4c61d75481867802cc12961dc1e385619
 
 build:
-  number: 1
+  number: 0
   skip:
     - not osx
   script: ${{ PYTHON }} -m pip install . -vv
